@@ -76,5 +76,10 @@ end
 def checkout(cart, coupons)
   con_cart = consolidate_cart(cart)
   apply_coupons(con_cart, coupons)
-  apply_clearance
+  apply_clearance(con_cart)
+  
+  i = 0 
+  total = 0 
+  
+  while
 end
