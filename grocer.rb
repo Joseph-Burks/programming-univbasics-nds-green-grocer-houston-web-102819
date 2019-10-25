@@ -27,7 +27,7 @@ end
 def make_coupon_hash(coup)
   {
     :item => "#{coup[:item]} W/COUPON",
-    :price => 
+    :price => (coup[:cost].to_f )
     :count =>
   }
   
