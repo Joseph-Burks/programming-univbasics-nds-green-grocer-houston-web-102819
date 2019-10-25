@@ -43,7 +43,7 @@ def apply_coupons(cart, coupons)
   i = 0
   while i < cart.length do
     single_coupon = coupons[i]
-    
+    item_has_coupon = find_item_by_name_in_collection(single_coupon[:item])
 end
 
 def apply_clearance(cart)
