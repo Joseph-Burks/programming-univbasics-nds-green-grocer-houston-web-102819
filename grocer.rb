@@ -42,6 +42,7 @@ end
 def apply_coupons(cart, coupons)
   i = 0
   while i < cart.length do
+    single_coupon = coupons[i]
     
 end
 
