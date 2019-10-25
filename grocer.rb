@@ -32,8 +32,9 @@ def make_coupon_hash(coup)
   }
 end
 
-def apply_the_coupon(match, coupon, cart)
-  match[:count] -= coupon[:num]
+def apply_the_coupon(matched, coupon, cart)
+  matched[:count] -= coupon[:num]
+  
   
 def apply_coupons(cart, coupons)
   
