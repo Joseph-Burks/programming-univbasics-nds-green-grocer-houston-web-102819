@@ -24,9 +24,9 @@ def consolidate_cart(cart)
   new_cart
 end
 
-def make_coupon_hash(coupon)
+def make_coupon_hash(coup)
   {
-    :item => "#{coupon[:item]} W/COUPON",
+    :item => "#{coup[:item]} W/COUPON",
     :price => 
     :count =>
   }
