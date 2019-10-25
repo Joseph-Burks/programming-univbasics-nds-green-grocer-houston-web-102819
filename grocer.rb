@@ -69,7 +69,7 @@ def apply_clearance(cart)
   cart
 end
 
-def all_items_cost(i)
+def all_item_cost(i)
   i[:price] * i[:count]
 end
   
@@ -82,5 +82,5 @@ def checkout(cart, coupons)
   total = 0 
   
   while i < con_cart.length do
-    total += 
+    total += all_item_cost(con_cart[i])
 end
