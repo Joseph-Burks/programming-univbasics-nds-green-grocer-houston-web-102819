@@ -83,4 +83,7 @@ def checkout(cart, coupons)
   
   while i < con_cart.length do
     total += all_item_cost(con_cart[i])
+    i += 1 
+  end
+  
 end
