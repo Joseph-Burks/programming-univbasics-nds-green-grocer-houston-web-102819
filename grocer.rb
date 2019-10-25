@@ -34,8 +34,11 @@ end
 
 def apply_the_coupon(matched, coupon, cart)
   matched[:count] -= coupon[:num]
-  make_coupon_hash(coupon)[:clearance] = matched[:clearance]
-  
+  item_w_coupon = make_coupon_hash(coupon)
+  item_w_coupon[:clearance] = matched[:clearance]
+  cart << item_w_coupon
+end
+
 def apply_coupons(cart, coupons)
   
 end
