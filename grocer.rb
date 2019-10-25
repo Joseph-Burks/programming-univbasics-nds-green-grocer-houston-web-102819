@@ -85,5 +85,5 @@ def checkout(cart, coupons)
     total += all_item_cost(con_cart[i])
     i += 1 
   end
-  total >= 100 ? total * 0.9 : total
+  total >= 100 ? (total * 0.9).round(2) : total
 end
