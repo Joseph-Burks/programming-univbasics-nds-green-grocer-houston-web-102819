@@ -26,7 +26,8 @@ end
 
 def make_coupon_hash(coupon)
   {
-    :item =
+    :item =>
+    :price
   }
   
 def apply_coupons(cart, coupons)
