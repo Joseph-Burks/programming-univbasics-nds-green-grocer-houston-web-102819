@@ -30,6 +30,9 @@ def make_coupon_hash(coup)
     :price => (coup[:cost].to_f * 1.0/ coup[:num]).round(2),
     :count => coup[:num]
   }
+end
+
+def apply_the_coupon()
   
 def apply_coupons(cart, coupons)
   
