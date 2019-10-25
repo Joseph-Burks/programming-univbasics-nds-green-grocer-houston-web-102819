@@ -74,5 +74,6 @@ def mult_items_cost(i)
 end
   
 def checkout(cart, coupons)
-  con_cart = consolidate_cart
+  con_cart = consolidate_cart(cart)
+  
 end
