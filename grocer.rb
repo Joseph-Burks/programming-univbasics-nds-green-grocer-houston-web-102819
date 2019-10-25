@@ -42,8 +42,8 @@ end
 def apply_coupons(cart, coupons)
   i = 0
   while i < cart.length do
-    single_coupon = coupons[i]
-    item_has_coupon = find_item_by_name_in_collection(single_coupon[:item], cart)
+    coupon = coupons[i]
+    item_has_coupon = find_item_by_name_in_collection(coupon[:item], cart)
     item_in_cart = !!item_has_coupon
     count_is_large_enough = item_in_cart && item_has_coupon[:count] >= single_coupon[:num]
     if item_in_cart && count_is_large_enough
