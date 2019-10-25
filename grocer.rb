@@ -69,6 +69,8 @@ def apply_clearance(cart)
   cart
 end
 
+def mult_items_cost
+  
 def checkout(cart, coupons)
   
 end
