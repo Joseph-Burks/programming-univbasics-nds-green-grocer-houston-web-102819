@@ -70,7 +70,7 @@ def apply_clearance(cart)
 end
 
 def mult_items_cost(i)
-  
+  i[:price] * i[:count]
   
 def checkout(cart, coupons)
   
