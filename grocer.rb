@@ -46,7 +46,8 @@ def apply_coupons(cart, coupons)
     item_has_coupon = find_item_by_name_in_collection(single_coupon[:item], cart)
     item_in_cart = !!item_has_coupon
     count_is_large_enough = item_in_cart && item_has_coupon[:count] >= single_coupon[:num]
-    
+    if item_in_cart && count_is_large_enough
+      
 end
 
 def apply_clearance(cart)
