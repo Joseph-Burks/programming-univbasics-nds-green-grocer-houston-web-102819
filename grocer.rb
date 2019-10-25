@@ -26,8 +26,8 @@ end
 
 def make_coupon_hash(coupon)
   {
-    :item => "#{coupon[:item]} W/COUPON"
-    :price =>
+    :item => "#{coupon[:item]} W/COUPON",
+    :price => 
     :count =>
   }
   
