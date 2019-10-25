@@ -33,25 +33,27 @@ def make_coupon_hash(coup)
   }
 end
 
-def apply_the_coupon(matched, coupon, cart)
-  matched[:count] -= coupon[:num]
-  item_w_coupon = make_coupon_hash(coupon)
-  item_w_coupon[:clearance] = matched[:clearance]
-  cart << item_w_coupon
+def apply_coupon_to_cart(matching_item, coupon, cart)
+  matching_item[:count] -= coupon[:num]
+  item_with_coupon = mk_coupon_hash(coupon)
+  item_with_coupon[:clearance] = matching_item[:clearance]
+  cart << item_with_coupon
 end
 
 def apply_coupons(cart, coupons)
   i = 0
-  while i < cart.length do
+  while i < coupons.count do
     coupon = coupons[i]
-    item_has_coupon = find_item_by_name_in_collection(coupon[:item], cart)
-    item_in_cart = !!item_has_coupon
-    count_is_large_enough = item_in_cart && item_has_coupon[:count] >= coupon[:num]
-    if item_in_cart and count_is_large_enough
-      apply_the_coupon(item_has_coupon, coupon, cart)
+    item_with_coupon = find_item_by_name_in_collection(coupon[:item], cart)
+    item_is_in_basket = !!item_with_coupon
+    count_is_big_enough_to_apply = item_is_in_basket && item_with_coupon[:count] >= coupon[:num]
+
+    if item_is_in_basket and count_is_big_enough_to_apply
+      apply_coupon_to_cart(item_with_coupon, coupon, cart)
     end
     i += 1
   end
+
   cart
 end
 
