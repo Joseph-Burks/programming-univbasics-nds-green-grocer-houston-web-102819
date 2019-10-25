@@ -32,7 +32,7 @@ def make_coupon_hash(coup)
   }
 end
 
-def apply_the_coupon()
+def apply_the_coupon(match, coupon, cart)
   
 def apply_coupons(cart, coupons)
   
