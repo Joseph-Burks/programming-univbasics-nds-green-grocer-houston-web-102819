@@ -25,9 +25,10 @@ def consolidate_cart(cart)
 end
 
 def make_coupon_hash(coup)
+  rounded_price = (coup[:cost].to_f * 1.0 / coup{:num]).round(2)
   {
     :item => "#{coup[:item]} W/COUPON",
-    :price => (coup[:cost].to_f * 1.0/ coup[:num]).round(2),
+    :price => rounded_price,
     :count => coup[:num]
   }
 end
