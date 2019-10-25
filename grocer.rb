@@ -40,7 +40,9 @@ def apply_the_coupon(matched, coupon, cart)
 end
 
 def apply_coupons(cart, coupons)
-  
+  i = 0
+  while i < cart.length do
+    
 end
 
 def apply_clearance(cart)
