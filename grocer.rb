@@ -25,7 +25,9 @@ def consolidate_cart(cart)
 end
 
 def make_coupon_hash(coupon)
-  
+  {
+    
+  }
   
 def apply_coupons(cart, coupons)
   
