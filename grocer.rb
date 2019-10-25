@@ -71,6 +71,7 @@ end
 
 def mult_items_cost(i)
   i[:price] * i[:count]
+end
   
 def checkout(cart, coupons)
   
